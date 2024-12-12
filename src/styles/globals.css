@@ -1,0 +1,567 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* .head{
+  background-color: #111111;
+  display: flex;
+color: #ffffff;
+gap: 50px;
+top: 0;
+z-index: 1000;
+position: sticky;
+}
+.logo{
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  margin-left: 60px;
+  margin-top: 10px;
+   margin-bottom: 10px;
+   font-weight: bold;
+   font-size: 20px;
+}
+.span{
+  color: #c6564b;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+.section{
+margin-left: 50%;
+margin-top: 10px;
+margin-bottom: 10px;
+
+
+}
+ul{
+  display: flex;
+  text-decoration: none;
+  gap: 20px;
+  font-size: 15px;
+} */
+.head {
+  background-color: #111111;
+  display: flex;
+  color: #ffffff;
+  gap: 50px;
+  top: 0;
+  z-index: 1000;
+  position: sticky;
+  justify-content: space-between; /* Ensures proper spacing on larger screens */
+  padding: 10px 20px; /* Adds some padding to the header */
+}
+
+.logo {
+  color: #ffffff;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.span {
+  color: #c6564b;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+}
+
+.section {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+ul {
+  display: flex;
+  text-decoration: none;
+  gap: 20px;
+  font-size: 1.5rem;
+  list-style: none; /* Removes bullet points */
+}
+
+ul li {
+  padding: 10px; /* Adds some padding for better clickable area */
+}
+
+/* Media Query for Tablets and Smaller Devices */
+@media (max-width: 768px) {
+  .head {
+    flex-direction: column; /* Stack the logo and menu vertically */
+    align-items: center; /* Center the content */
+    gap: 20px;
+  }
+
+  .logo {
+    font-size: 24px; /* Make the logo slightly bigger */
+    margin-left: 0; /* Remove margin for better alignment */
+  }
+
+  .section ul {
+    flex-direction: column; /* Stack the menu items vertically */
+    gap: 15px; /* Space out the menu items */
+  }
+
+  .section ul li {
+    font-size: 18px; /* Increase font size for readability */
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px; /* Reduce logo font size for smaller screens */
+  }
+
+  .section ul li {
+    font-size: 16px; /* Adjust font size for better readability on mobile */
+  }
+}
+
+
+/* Create a full-page background */
+.fullbackground {
+  background-image: url('/images/instagram.png'); /* Path relative to the public folder */
+  background-size: cover; /* Ensure the image covers the entire area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  height: 100vh; /* Make it fill the full viewport height */
+  width: 100%; /* Make it span the full width */
+}
+
+
+.text-overlay {
+  position: absolute; /* Position the text over the image */
+  top: 60%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Adjust position to truly center */
+  color: white; /* White text color */
+  text-align: center; /* Center the text horizontally */
+  font-weight: bold; /* Make the text bold */
+}
+
+.text-overlay h1 {
+  font-size: 2.25rem; /* Equivalent to text-4xl in Tailwind */
+}
+
+.text-overlay p {
+  font-size: 1.125rem; /* Equivalent to text-lg in Tailwind */
+}
+
+
+.text-overlay2{
+position: absolute;
+top: 10%;
+left: 5%;
+color: red;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-weight: bold;
+}
+.text-overlay2 h1 {
+  font-size: 2.5rem; /* Equivalent to text-4xl in Tailwind */
+}
+
+.text-overlay2 h2 {
+  font-size: 1.5em; /* Equivalent to text-lg in Tailwind */
+}
+
+.userName{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3.25rem;
+  font-weight: bold;
+  color: yellow;
+}
+
+/* Basic button styling */
+.black-red-button {
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  border: 2px solid red; /* Red border */
+  padding: 12px 24px; /* Padding inside the button */
+  font-size: 1.2rem; /* Font size */
+  font-weight: bold; /* Bold text */
+  text-transform: uppercase; /* Uppercase text */
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for the button */
+.black-red-button:hover {
+  background-color: red; /* Red background on hover */
+  color: black; /* Black text on hover */
+  border-color: black; /* Black border on hover */
+}
+.collection-div{
+  background-color:black;
+  width: 100%;
+  height: 100vh;
+}
+.info{
+  margin-bottom: 40px;
+}
+.collection-div h1{
+  padding-top: 50px;
+  color: red;
+  font-size: 2.25rem;
+text-align: center;
+
+}
+.collection-div h2{
+  color: red;
+  font-size: 1.75rem;
+text-align: center;
+padding-bottom: 30px;
+}
+
+
+/* Container for car buttons */
+.car-company {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+/* Styling for the car buttons */
+.car-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black; /* Black background */
+  color: white; /* White text */
+  border: 2px solid white; /* Red border */
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition */
+  width: 180px; /* Fixed width */
+  text-align: center;
+}
+
+/* Add space between the logo and the text */
+.car-button span {
+  margin-left: 10px; /* Space between the logo and the text */
+  font-size: 2rem;
+}
+
+/* Hover effect for the car buttons */
+.car-button:hover {
+  background-color: red; /* Red background on hover */
+  color: black; /* Black text on hover */
+  border-color: black; /* Black border on hover */
+}
+
+/* Image styling */
+.car-button img {
+  border-radius: 5px; /* Optional: rounded image corners */
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+  background-color: #111111; /* Black background */
+  color: white; /* White text */
+  padding: 20px 0; /* Padding for spacing */
+  text-align: center; /* Center text */
+  display: flex;
+  flex-direction: column; /* Stack the sections vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Space between sections */
+  position: fixed; /* Fixed positioning */
+  bottom: 0; /* Stick to the bottom */
+  width: 100%; /* Full width of the viewport */
+  z-index: 1000; /* Ensure it stays on top */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for better visuals */
+}
+
+.main-content {
+  padding-bottom: 200px; /* Adjust padding equal to footer height */
+}
+
+
+.footer-logo {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.footer-logo .span {
+  color: #c6564b; /* Red color for Rx part */
+}
+
+.footer-links ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  list-style: none; /* Removes bullet points */
+  padding: 0;
+}
+
+.footer-links ul li {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer-links ul li:hover {
+  color: #c6564b; /* Red on hover */
+}
+
+.footer-copy p {
+  font-size: 14px;
+  color: #888; /* Lighter text for the copyright notice */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .footer-logo {
+    font-size: 20px; /* Adjust logo size on smaller screens */
+  }
+
+  .footer-links ul {
+    flex-direction: column; /* Stack the links vertically on tablets */
+    gap: 10px;
+  }
+
+  .footer-links ul li {
+    font-size: 18px; /* Increase font size for better readability on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    font-size: 18px; /* Adjust logo size on mobile */
+  }
+
+  .footer-links ul li {
+    font-size: 16px; /* Adjust font size for mobile */
+  }
+
+  .footer-copy p {
+    font-size: 12px; /* Reduce copyright text size for mobile */
+  }
+}
+
+/* Container for the car cards */
+.car-list {
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row, equally spaced */
+  gap: 20px; /* Space between cards */
+  padding: 20px;
+  justify-content: center; /* Center the grid */
+}
+
+/* Individual car card */
+.car-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.car-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Image inside the car card */
+.car-image {
+  width: 100%; /* Make the image fill the card */
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Car details */
+.car-info {
+  padding: 15px;
+}
+
+.car-name {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.car-price {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: #c6564b;
+}
+
+.car-button {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  color: #fff;
+  background-color: #111111;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.car-button:hover {
+  background-color: #c6564b;
+}
+
+
+.black-red-button {
+  background-color: black;
+  color: white;
+  border: 2px solid red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.black-red-button:hover {
+  background-color: red;
+  color: black;
+}
+
+
+
+
+
+/* Full-page container with a background image */
+.page-container {
+  display: flex; /* Flexbox for centering */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 100vh; /* Full viewport height */
+  background-image: url('/images/instagram.png'); /* Replace with your background */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; /* Add padding for spacing */
+}
+
+/* Headings */
+.page-container h1,
+.page-container h2 {
+  font-family: 'Courier New', Courier, monospace;
+  color: white; /* Red color */
+  text-align: center;
+  margin-bottom: 10px; /* Spacing between headings */
+  font-size: 40px;
+}
+
+/* Form Container */
+form {
+  width: 100%;
+  max-width: 400px;
+  background-color: rgba(17, 17, 17, 0.9); /* Black background with transparency */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Add spacing between input fields */
+}
+
+/* Form Labels */
+form label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #c6564b; /* Red color */
+}
+
+/* Input Fields */
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 8px;
+  border: 1px solid #444; /* Dark gray border */
+  border-radius: 4px;
+  background-color: #222; /* Darker input background */
+  color: white; /* White text */
+}
+
+form input:focus {
+  outline: none;
+  border-color: #c6564b; /* Red border on focus */
+  box-shadow: 0 0 4px #c6564b; /* Subtle red glow */
+}
+
+/* Submit Button */
+form button {
+  padding: 10px;
+  background-color: #c6564b; /* Red button background */
+  border: none;
+  border-radius: 4px;
+  color: white; /* White text */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #ff5e50; /* Lighter red on hover */
+  transform: scale(1.05); /* Slight grow effect */
+}
+
+form button:active {
+  background-color: #b0453d; /* Darker red when clicked */
+}
+
+/* Sign-in Link */
+a {
+  margin-top: 20px; /* Spacing above the link */
+  font-size: 20px;
+  font-weight: bold;
+  color: white; /* Red color */
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color:white; /* Lighter red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  form {
+    padding: 16px;
+  }
+
+  h1,
+  h2 {
+    font-size: 18px;
+    
+  }
+
+  form input,
+  form button {
+    font-size: 14px;
+  }
+}
