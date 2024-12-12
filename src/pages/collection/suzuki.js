@@ -13,13 +13,13 @@ const Suzuki = () => {
 
   const suzukiCarList = [
     { name: 'Swift', price: "2,000,000 PKR", image: "/images/swift.avif" },
-    { name: 'Alto', price: "1,500,000 PKR", image: "/images/swift.avif" },
-    { name: 'G-Wagonr', price: "2,000,000 PKR", image: "/images/swift.avif" },
-    { name: 'Mehran', price: "1,500,000 PKR", image: "/images/swift.avif" },
+    { name: 'Alto', price: "1,500,000 PKR", image: "/images/aulto.jpg" },
+    { name: 'Wagonr', price: "2,000,000 PKR", image: "/images/wagonr.avif" },
+    { name: 'Mehran', price: "1,000,000 PKR", image: "/images/mehran.jpg" },
     { name: 'Swift', price: "2,000,000 PKR", image: "/images/swift.avif" },
-    { name: 'Alto', price: "1,500,000 PKR", image: "/images/swift.avif" },
-    { name: 'G-Wagonr', price: "2,000,000 PKR", image: "/images/swift.avif" },
-    { name: 'Mehran', price: "1,500,000 PKR", image: "/images/swift.avif" },
+    { name: 'Alto', price: "1,500,000 PKR", image: "/images/aulto.jpg" },
+    { name: 'Wagonr', price: "2,000,000 PKR", image: "/images/wagonr.avif" },
+    { name: 'Mehran', price: "1,000,000 PKR", image: "/images/mehran.jpg" },
     // Add more cars here if needed
   ];
 

@@ -393,9 +393,17 @@ padding-bottom: 30px;
 }
 
 /* Image inside the car card */
-.car-image {
-  width: 100%; /* Make the image fill the card */
+/* .car-image {
+  width: 100%; 
   height: auto;
+  border-bottom: 1px solid #ddd;
+} */
+
+
+.car-image {
+  width: 100%; /* Make the image fill the card's width */
+  height: 200px; /* Enforce a fixed height */
+  object-fit: cover; /* Ensure images maintain aspect ratio and cover the area */
   border-bottom: 1px solid #ddd;
 }
 
